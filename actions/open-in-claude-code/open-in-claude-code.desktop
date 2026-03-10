@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openInClaudeCode
+X-KDE-Priority=TopLevel
+
+[Desktop Action openInClaudeCode]
+Name=Open In Claude
+Icon=utilities-terminal
+Exec=konsole -e bash -c 'cd "%f" && claude'
