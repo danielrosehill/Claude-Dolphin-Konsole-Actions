@@ -1,3 +1,5 @@
+[![Part of the Claude Code Repos Index](https://img.shields.io/badge/Claude%20Code%20Repos-Index-blue?style=flat-square&logo=github)](https://github.com/danielrosehill/Claude-Code-Repos-Index)
+
 # Claude Dolphin & Konsole Actions
 
 > **Work in Progress**
@@ -42,3 +44,7 @@ cd actions/open-in-claude-code
 ## Specification
 
 See [planning/SPEC.md](planning/SPEC.md) for the full specification.
+
+---
+
+For more Claude Code projects, visit my [Claude Code Repos Index](https://github.com/danielrosehill/Claude-Code-Repos-Index).
