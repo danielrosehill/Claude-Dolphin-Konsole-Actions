@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openInClaudeCodeSafe
+X-KDE-Priority=TopLevel
+
+[Desktop Action openInClaudeCodeSafe]
+Name=Open In Claude Code (Safe Mode)
+Icon=utilities-terminal
+Exec=konsole -e bash -c 'cd "%f" && claude'

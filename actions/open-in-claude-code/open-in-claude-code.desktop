@@ -8,4 +8,4 @@ X-KDE-Priority=TopLevel
 [Desktop Action openInClaudeCode]
 Name=Open In Claude
 Icon=utilities-terminal
-Exec=konsole -e bash -c 'cd "%f" && claude'
+Exec=konsole -e bash -c 'cd "%f" && claude --dangerously-skip-permissions'

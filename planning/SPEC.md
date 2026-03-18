@@ -38,7 +38,7 @@ For each action:
 **ID:** `open-in-claude-code`
 **Status:** Installed and working
 **Layout:** Single window
-**Description:** Opens Konsole at the selected directory and launches `claude`.
+**Description:** Opens Konsole at the selected directory and launches `claude` with `--dangerously-skip-permissions` (all tool calls auto-approved).
 
 ```ini
 [Desktop Entry]
@@ -50,6 +50,29 @@ X-KDE-Priority=TopLevel
 
 [Desktop Action openInClaudeCode]
 Name=Open In Claude
+Icon=utilities-terminal
+Exec=konsole -e bash -c 'cd "%f" && claude --dangerously-skip-permissions'
+```
+
+---
+
+### 1b. Open In Claude Code (Safe Mode) (Installed)
+
+**ID:** `open-in-claude-code-safe`
+**Status:** Installed and working
+**Layout:** Single window
+**Description:** Opens Konsole at the selected directory and launches `claude` with default (safe) permissions — tool calls require approval.
+
+```ini
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openInClaudeCodeSafe
+X-KDE-Priority=TopLevel
+
+[Desktop Action openInClaudeCodeSafe]
+Name=Open In Claude Code (Safe Mode)
 Icon=utilities-terminal
 Exec=konsole -e bash -c 'cd "%f" && claude'
 ```
