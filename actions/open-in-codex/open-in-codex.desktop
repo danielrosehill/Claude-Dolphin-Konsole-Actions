@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openInCodex
+X-KDE-Priority=TopLevel
+
+[Desktop Action openInCodex]
+Name=Open In Codex
+Icon=utilities-terminal
+Exec=konsole --workdir "%f" -e codex

@@ -1,8 +1,8 @@
-# Claude Dolphin & Konsole Actions
+# Dolphin AI Actions
 
 ## Project Overview
 
-KDE Dolphin service menu actions that launch Claude Code in various window layouts. Target environment is Ubuntu 25.10 with KDE Plasma 6.4.5 on Wayland.
+KDE Dolphin service menu actions that launch AI coding agents in Konsole at the selected directory. Target environment is Ubuntu 25.10 with KDE Plasma 6.4.5 on Wayland.
 
 ## Key Paths
 
@@ -20,8 +20,10 @@ KDE Dolphin service menu actions that launch Claude Code in various window layou
 
 ## Current Status
 
-- **Action 1 (Open In Claude):** Complete and installed on this machine
-- **Actions 2-5:** Not yet built — see `planning/SPEC.md`
+- **Open In Claude:** Complete
+- **Open In Claude Code (Safe Mode):** Complete
+- **Open In Codex:** Complete
+- **Multi-window actions:** Not yet built — see `planning/SPEC.md`
 
 ## Notes
 

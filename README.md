@@ -1,50 +1,62 @@
-[![Part of the Claude Code Repos Index](https://img.shields.io/badge/Claude%20Code%20Repos-Index-blue?style=flat-square&logo=github)](https://github.com/danielrosehill/Claude-Code-Repos-Index)
+# Dolphin AI Actions
 
-# Claude Dolphin & Konsole Actions
+Dolphin right-click context menu actions (KDE service menus) for opening a selected directory in AI coding agents.
 
-> **Work in Progress**
+## Available actions
 
-Dolphin right-click context menu actions (KDE service menus) for launching Claude Code and related tools in structured window layouts.
+| Action | Command | Status |
+|---|---|---|
+| [Open In Claude](actions/open-in-claude-code/) | `claude --dangerously-skip-permissions` | Ready |
+| [Open In Claude Code (Safe Mode)](actions/open-in-claude-code-safe/) | `claude` | Ready |
+| [Open In Codex](actions/open-in-codex/) | `codex` | Ready |
 
-## Environment
+Each action opens Konsole at the selected directory and starts the corresponding CLI.
 
-- Ubuntu 25.10 (Questing Quokka)
-- KDE Plasma 6.4.5 / Wayland
-- Dolphin 25.08.1
-- Konsole 25.08.1
+## Requirements
 
-## Actions
+- KDE Plasma with Dolphin and Konsole
+- The CLI for the action you want to install (`claude` or `codex`) available on your `PATH`
 
-| # | Action | Layout | Status |
-|---|--------|--------|--------|
-| 1 | [Open In Claude](actions/open-in-claude-code/) | Single terminal | Done |
-| 2 | Claude + Raw Terminal | 2/3 + 1/3 split | Planned |
-| 3 | Super Claude (2x / 4x) | Grid of Claude instances | Planned |
-| 4 | Claude + Terminal + File Manager | Three-pane | Planned |
-| 5 | Claude + File Manager | 2/3 + 1/3 split | Planned |
-
-## Structure
-
-```
-actions/           # .desktop files, install & uninstall scripts per action
-planning/          # Specification and design documents
-screenshots/       # Screenshots of working actions
-```
+The actions use the KDE 6 service-menu directory: `~/.local/share/kio/servicemenus/`.
 
 ## Installation
 
-Each action has its own `install.sh` and `uninstall.sh`:
+Each action has its own installer. For example:
+
+```bash
+cd actions/open-in-codex
+./install.sh
+```
+
+To install a Claude action instead, run the installer in its action directory:
 
 ```bash
 cd actions/open-in-claude-code
-./install.sh    # Copies .desktop file to ~/.local/share/kio/servicemenus/
-./uninstall.sh  # Removes it
+./install.sh
 ```
 
-## Specification
+Restart Dolphin if the new entry does not appear immediately:
 
-See [planning/SPEC.md](planning/SPEC.md) for the full specification.
+```bash
+kquitapp6 dolphin
+dolphin &
+```
 
----
+## Uninstallation
 
-For more Claude Code projects, visit my [Claude Code Repos Index](https://github.com/danielrosehill/Claude-Code-Repos-Index).
+Run the matching uninstaller from the action directory:
+
+```bash
+cd actions/open-in-codex
+./uninstall.sh
+```
+
+## Repository structure
+
+```text
+actions/           # One directory per service-menu action
+planning/          # Specifications and future ideas
+screenshots/       # Screenshots of working actions
+```
+
+See [planning/SPEC.md](planning/SPEC.md) for implementation details and planned layouts.

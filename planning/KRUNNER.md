@@ -6,8 +6,8 @@ Investigate whether a KRunner plugin can be created to complement the Dolphin se
 
 ## Use Cases
 
-- **Open folder in Claude Code** — type a path or folder name in KRunner, select the action, and it launches Konsole with `claude` at that path. This would complement the existing "Open In Terminal" KRunner action.
-- **All actions via KRunner** — potentially expose all Dolphin actions (Claude + Terminal split, Super Claude, etc.) as KRunner results, so users aren't limited to right-clicking in Dolphin.
+- **Open folder in an AI coding agent** — type a path or folder name in KRunner, select Claude or Codex, and launch Konsole with that agent at the path. This would complement the existing "Open In Terminal" KRunner action.
+- **All actions via KRunner** — potentially expose all Dolphin AI actions as KRunner results, so users aren't limited to right-clicking in Dolphin.
 
 ## Research Needed
 

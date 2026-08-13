@@ -1,4 +1,4 @@
-# Claude Dolphin & Konsole Actions — Specification
+# Dolphin AI Actions — Specification
 
 ## Environment
 
@@ -13,7 +13,7 @@
 
 ## Purpose
 
-This repository develops **Dolphin right-click context menu actions** (KDE service menus) that launch Claude Code and related tools in structured window layouts. Each action is a `.desktop` file installed into the KDE service menus directory.
+This repository develops **Dolphin right-click context menu actions** (KDE service menus) that launch AI coding agents and related tools. Each action is a `.desktop` file installed into the KDE service menus directory.
 
 ### Repository Deliverables
 
@@ -79,7 +79,30 @@ Exec=konsole -e bash -c 'cd "%f" && claude'
 
 ---
 
-### 2. Claude + Raw Terminal (Split)
+### 2. Open In Codex (Implemented)
+
+**ID:** `open-in-codex`
+**Status:** Implemented
+**Layout:** Single window
+**Description:** Opens Konsole at the selected directory and launches the Codex CLI.
+
+```ini
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openInCodex
+X-KDE-Priority=TopLevel
+
+[Desktop Action openInCodex]
+Name=Open In Codex
+Icon=utilities-terminal
+Exec=konsole --workdir "%f" -e codex
+```
+
+---
+
+### 3. Claude + Raw Terminal (Split)
 
 **ID:** `claude-split-terminal`
 **Status:** Not yet created
@@ -94,7 +117,7 @@ Both open at the selected directory path. May use Konsole's built-in split/tab/p
 
 ---
 
-### 3. Super Claude (Multi-Instance)
+### 4. Super Claude (Multi-Instance)
 
 **ID:** `super-claude-2x` / `super-claude-4x`
 **Status:** Not yet created
@@ -109,7 +132,7 @@ Requires a window wrapper to maintain the grid layout.
 
 ---
 
-### 4. Claude + Terminal + File Manager
+### 5. Claude + Terminal + File Manager
 
 **ID:** `claude-terminal-filemanager`
 **Status:** Not yet created
@@ -124,7 +147,7 @@ Requires a window wrapper to bind three windows together.
 
 ---
 
-### 5. Claude + File Manager
+### 6. Claude + File Manager
 
 **ID:** `claude-filemanager`
 **Status:** Not yet created
@@ -140,7 +163,7 @@ Requires a window wrapper to bind three windows together.
 ## Future Scope
 
 - **Arbitrary combinations:** Allow users to define custom layouts (e.g., Claude + terminal + 2x file manager, file manager at subpaths, etc.)
-- Not in current scope — initial focus is the five actions above.
+- Not in current scope — initial focus is the actions above.
 
 ## Technical Considerations
 
