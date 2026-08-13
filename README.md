@@ -9,8 +9,11 @@ Dolphin right-click context menu actions (KDE service menus) for opening a selec
 | [Open In Claude](actions/open-in-claude-code/) | `claude --dangerously-skip-permissions` | Ready |
 | [Open In Claude Code (Safe Mode)](actions/open-in-claude-code-safe/) | `claude` | Ready |
 | [Open In Codex](actions/open-in-codex/) | `codex` | Ready |
+| [Open In Codex (Permissive Mode)](actions/open-in-codex-permissive/) | `codex --dangerously-bypass-approvals-and-sandbox` | Ready |
 
 Each action opens Konsole at the selected directory and starts the corresponding CLI.
+
+The Codex permissive-mode action bypasses both approval prompts and the Codex sandbox. Use it only where you trust the selected directory and its contents. See the [official Codex CLI reference](https://developers.openai.com/codex/cli/reference) for the flag's security guidance.
 
 ## Requirements
 

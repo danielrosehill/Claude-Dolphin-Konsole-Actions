@@ -102,6 +102,29 @@ Exec=konsole --workdir "%f" -e codex
 
 ---
 
+### 2b. Open In Codex (Permissive Mode) (Implemented)
+
+**ID:** `open-in-codex-permissive`
+**Status:** Implemented
+**Layout:** Single window
+**Description:** Opens Konsole at the selected directory and launches Codex without approval prompts or sandboxing. The user-facing label calls this "Permissive Mode"; the underlying Codex flag explicitly identifies the security implications.
+
+```ini
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openInCodexPermissive
+X-KDE-Priority=TopLevel
+
+[Desktop Action openInCodexPermissive]
+Name=Open In Codex (Permissive Mode)
+Icon=utilities-terminal
+Exec=konsole --workdir "%f" -e codex --dangerously-bypass-approvals-and-sandbox
+```
+
+---
+
 ### 3. Claude + Raw Terminal (Split)
 
 **ID:** `claude-split-terminal`

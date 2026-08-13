@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openInCodexPermissive
+X-KDE-Priority=TopLevel
+
+[Desktop Action openInCodexPermissive]
+Name=Open In Codex (Permissive Mode)
+Icon=utilities-terminal
+Exec=konsole --workdir "%f" -e codex --dangerously-bypass-approvals-and-sandbox

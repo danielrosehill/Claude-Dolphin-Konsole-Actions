@@ -23,6 +23,7 @@ KDE Dolphin service menu actions that launch AI coding agents in Konsole at the 
 - **Open In Claude:** Complete
 - **Open In Claude Code (Safe Mode):** Complete
 - **Open In Codex:** Complete
+- **Open In Codex (Permissive Mode):** Complete
 - **Multi-window actions:** Not yet built — see `planning/SPEC.md`
 
 ## Notes
